@@ -1,0 +1,22 @@
+ALGORITHM sentence
+VAR
+    i,nbV,nbM: INTEGER
+    ch:STRING
+BEGIN
+nbV:=0
+nbM:=0
+    WHILE (ch[i]<> ".") DO
+        IF(ch[i] in ["a","e","i","o","u","y"]) THEN
+        nbV := nbV +1
+        END_IF
+        IF (ch[i]=" ") THEN
+            nbM:= nbM+1
+        END_IF
+        i:=i+1
+    END_WHILE
+    write("LE nombre de voyels est",nbV)
+    write("LE nombre de mots est",nbM+1)
+    write("LE nombre de caractères est égale à",i)
+
+
+END
